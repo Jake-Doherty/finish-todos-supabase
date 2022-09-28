@@ -45,7 +45,7 @@ export async function completeTodo(id) {
     return await client
         .from('todos')
         .update({ complete: true })
-        .eq('user_id', id)
+        .eq('id', id)
         .single();
 }
 
